@@ -1,8 +1,9 @@
 import './App.css';
+import BirthdayReminder from './prtojects/01-birthday-reminder'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <BirthdayReminder/>
   );
 }
 
