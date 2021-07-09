@@ -7,6 +7,45 @@ import Tours from './Tours'
 const url = 'https://course-api.com/react-tours-project'
 
 export default function Index() {
-  return <h2>Tours Project Setup</h2>
-}
+    const [isLoading, setIsLoading] = useState(true)
+    const [tours, setTours] = useState([])
 
+    const getData = async() => {
+        try{
+            const data = await fetch(url).then(response=>response.json())
+            setTours(data)
+            setIsLoading(false)
+        }
+        catch(error){
+            console.log(error)
+        }
+
+    }
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+    if (isLoading){
+        return (
+            <main>
+                <section className="container">
+                {isLoading && <Loading/>}
+                </section>
+            </main>
+        )
+    }
+    return (
+        <main>
+            <section>
+                <div className="title">
+                    <h2>Our Tours</h2>
+                    <div className="underline"></div>
+                </div>
+                <div>
+                    <Tours tours={tours}/>
+                </div>
+            </section>
+        </main>
+    )  
+}
