@@ -30,16 +30,24 @@ export default function Index() {
         const newTours = tours.filter(tour => tour.id !==id)
         setTours(newTours)
     }
-
+    
     if (isLoading){
         return (
             <main>
-                <section>
                 {isLoading && <Loading/>}
-                </section>
             </main>
         )
     }
+    if(tours.length===0){
+        return (
+            <main>
+                <div className="title">
+                    <h2> no tours left</h2>
+                    <button className="btn" onClick={getData}>Refrech</button>
+                </div>
+            </main>
+        )
+    }   
     return (
         <main>
             <section>
@@ -50,6 +58,7 @@ export default function Index() {
                 <div>
                     <Tours tours={tours}  removeTour={removeTour}/>
                 </div>
+  
             </section>
         </main>
     )  
