@@ -72,7 +72,7 @@ main {
   
 .container {
     width: 90vw;
-    margin: 5rem 0;
+    /* margin: 5rem 0; */
     max-width: var(--fixed-width);
     background: var(--clr-white);
     border-radius: var(--radius);
@@ -83,4 +83,10 @@ main {
     font-weight: normal;
     text-transform: none;
     margin-bottom: 2rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
