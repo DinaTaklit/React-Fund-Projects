@@ -180,3 +180,8 @@ Variables
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius);
   }
+
+  .single-tour .delete-btn:hover{
+    color: white;
+    background-color: var(--clr-red-dark);
+  }

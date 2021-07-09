@@ -26,6 +26,11 @@ export default function Index() {
         getData()
     }, [])
 
+    const removeTour = (id) => {
+        const newTours = tours.filter(tour => tour.id !==id)
+        setTours(newTours)
+    }
+
     if (isLoading){
         return (
             <main>
@@ -43,7 +48,7 @@ export default function Index() {
                     <div className="underline"></div>
                 </div>
                 <div>
-                    <Tours tours={tours}/>
+                    <Tours tours={tours}  removeTour={removeTour}/>
                 </div>
             </section>
         </main>

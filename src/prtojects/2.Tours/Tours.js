@@ -1,11 +1,11 @@
 import Tour from './Tour';
-const Tours = ({tours}) => {
+const Tours = ({tours, removeTour}) => {
   return (
     <>
       {
         tours.map(tour => {
           return (
-              <Tour {...tour} key={tour.id}/>
+              <Tour {...tour} key={tour.id}  removeTour={removeTour}/>
           )
         })
       }
