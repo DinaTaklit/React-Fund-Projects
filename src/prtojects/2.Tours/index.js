@@ -29,7 +29,7 @@ export default function Index() {
     if (isLoading){
         return (
             <main>
-                <section className="container">
+                <section>
                 {isLoading && <Loading/>}
                 </section>
             </main>
