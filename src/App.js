@@ -2,11 +2,12 @@
 // import ToursApp from './prtojects/2.Tours'
 // import Reviews from './prtojects/3.Reviews'
 // import Accordion from './prtojects/4.Accordion'
-import Menu from './prtojects/5.Menu'
+// import Menu from './prtojects/5.Menu'
+import Tabs from './prtojects/6.Tabs'
 
 function App() {
   return (
-    <Menu/>
+    <Tabs/>
   );
 }
 
