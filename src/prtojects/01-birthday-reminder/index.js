@@ -3,7 +3,7 @@ import {data} from './data'
 import './index.css'
 import List from './List'
 
-export default function Index() {
+export default function IndexBirthday() {
     const [people, setPeople] = useState(data)
     return (
         <>
