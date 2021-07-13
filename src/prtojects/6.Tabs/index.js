@@ -5,7 +5,22 @@ import './index.css'
 const url = 'https://course-api.com/react-tabs-project'
 
 function Index() {
-  return <h2>tabs project setup</h2>
+  const [loading, setLoading] = useState(true)
+  const [jobs, setJobs] = useState([])
+  const [value, setValue] = useState(0)
+
+  const fetchJobs = async() => {
+    const newJobs = await fetch(url).then(response => response.json())
+    setJobs(newJobs)
+  }
+  useEffect(() => {
+    fetchJobs()
+    setLoading(false)
+  }, [])
+
+  return (
+    <h1>Tabs</h1>
+  )
 }
 
 export default Index
