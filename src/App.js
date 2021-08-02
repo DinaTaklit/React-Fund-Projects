@@ -5,10 +5,11 @@
 // import Menu from './projects/5.Menu'
 // import Tabs from './projects/6.Tabs'
 // import Slider from './projects/7.Slider'
-import Navbar from './projects/8.Navbar'
+// import Navbar from './projects/8.Navbar'
+import SidebarModal from './projects/9.Sidebar-Modal'
 function App() {
   return (
-    <Navbar/>
+    <SidebarModal/>
   );
 }
 
