@@ -6,10 +6,11 @@
 // import Tabs from './projects/6.Tabs'
 // import Slider from './projects/7.Slider'
 // import Navbar from './projects/8.Navbar'
-import SidebarModal from './projects/9.Sidebar-Modal'
+// import SidebarModal from './projects/9.Sidebar-Modal'
+import StripeMenu from './projects/10.StripeMenu'
 function App() {
   return (
-    <SidebarModal/>
+    <StripeMenu/>
   );
 }
 
