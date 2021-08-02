@@ -3,12 +3,15 @@ import Hero from './Hero'
 import Sidebar from './Sidebar'
 import Submenu from './Submenu'
 import './index.css'
-
+import { AppProvider } from './context';
 function Index() {
   return (
-    <>
-      <h2>stripe submenus setup</h2>
-    </>
+    <AppProvider>
+      <Navbar/>
+      <Sidebar/>
+      <Hero/>
+      <Submenu/>
+    </AppProvider>
   )
 }
 
