@@ -12,32 +12,41 @@ const Submenu = () => {
 
   const submenuRef = useRef(null) // use a ref to store the submenu to change its location
 
+  // use state to change the width of each link submenu
+  const [columns, setColumns] = useState('col-2')
+
   // use useEffect to set the submenu location
   useEffect(() => {
+
+    // Setup the location of the submenu
     submenuRef.current.style.top = `${location.bottom}px`
     submenuRef.current.style.left = `${location.center}px`
+
+    // Setup the width of the submenu
+    if (links.length ===3){
+      setColumns('col-3')
+    } if (links.length >3){
+      setColumns('col-4')
+    }
+
   }, [page, location, links])
 
   return (
     <aside className={`submenu ${isSubmenuOpen ? 'show':''}`} ref={submenuRef}>
-      <section class="submenu-center">
-        <h4>{page}</h4>
-        <ul className="col-2">
+      <h4>{page}</h4>
+      <div class={`submenu-center ${columns}`}>
           {
             links.map((link, index) => {
             const {url, label, icon} = link
              return (
-              <li key={index}>
-                <a href={url}>
-                  {icon}
-                  {label}
-                </a>
-              </li>
+              <a key={index} href={url}>
+                {icon}
+                {label}
+              </a>
              )
             })
           }
-        </ul>
-      </section>
+      </div>
     </aside>
   )
 }
