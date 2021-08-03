@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 const Submenu = () => {
-  return <h2>submenu component</h2>
+  return (
+    <aside className="submenu show">
+      <section>
+        <h3>Submenu</h3>
+      </section>
+    </aside>
+  )
 }
 
 export default Submenu
