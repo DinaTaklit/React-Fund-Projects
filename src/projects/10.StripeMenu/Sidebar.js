@@ -1,11 +1,13 @@
 import { FaTimes } from 'react-icons/fa'
 import sublinks from './data'
+import { useGlobalContext } from './context'
 
 const Sidebar = () => {
+  const {isSidebarOpen, closeSidebar} = useGlobalContext()
   return (
-    <div className="sidebar-wrapper">
+    <div className={`sidebar-wrapper ${isSidebarOpen ? 'show':''}`}>
       <aside className="sidebar">
-        <button className="close-btn">
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
         <div className="sidebar-links">
