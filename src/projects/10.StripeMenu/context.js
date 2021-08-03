@@ -13,7 +13,7 @@ const AppProvider = ({ children }) =>  {
 
     // Functions to show and hide Submenu
     const openSubmenu = () => {
-        setIsSidebarOpen(true)
+        setIsSubmenuOpen(true)
     }
     const closeSubmenu = () => setIsSubmenuOpen(false)
 

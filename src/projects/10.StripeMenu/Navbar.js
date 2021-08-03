@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa'
 import {useGlobalContext} from './context'
 
 const Navbar = () => {
-  const {openSidebar} = useGlobalContext()
+  const {openSidebar,openSubmenu} = useGlobalContext()
   return (
     <nav className="nav">
       <div className="nav-center">
@@ -16,17 +16,17 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <button className="link-btn">
+            <button className="link-btn" onClick={openSubmenu}>
               products
             </button>
           </li>
           <li>
-            <button className="link-btn">
+            <button className="link-btn" onClick={openSubmenu}>
               developers
             </button>
           </li>
           <li>
-            <button className="link-btn">
+            <button className="link-btn" onClick={openSubmenu}>
               compagny
             </button>
           </li>
