@@ -79,7 +79,6 @@ Variables
   */
 
    .btn,
-   .btn-white,
    .btn-primary {
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
@@ -98,15 +97,7 @@ Variables
     background: var(--primaryColor);
     color: var(--mainWhite);
   }
-   .btn-white {
-    background: transparent;
-    color: var(--mainWhite);
-    border-color: var(--mainWhite);
-  }
-   .btn-white:hover {
-    background: var(--mainWhite);
-    color: var(--primaryColor);
-  }
+
    .btn-primary {
     background: var(--primaryColor);
     color: var(--mainWhite);
@@ -116,23 +107,9 @@ Variables
     background: var(--primaryLightColor);
     color: var(--primaryColor);
   }
-   .btn-block {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: var(--lightShadow);
-    text-align: center;
-  }
-   .btn-details {
-    padding: 0.25rem 0.4rem;
-  }
-   .btn-details:hover {
-    background: var(--primaryLightColor);
-    border-color: var(--primaryLightColor);
-  }
 
   
-   .section {
+  .section {
     padding: 5rem 0;
   }
    .section-title {
@@ -152,14 +129,24 @@ Variables
     column-gap: 2rem;
     /* align-items: start; */
   }
-  @media screen and (min-width: 576px) {
+  @media screen and (max-width: 576px) {
      .projects-center {
-      grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+      grid-template-columns: repeat(1, 1fr);
     }
   }
+  @media screen and (min-width: 768px) {
+    .projects-center {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
 
-  
-   .project {
+  @media screen and (min-width: 959px) {
+    .projects-center {
+     grid-template-columns: repeat(3, 1fr);
+   }
+ }
+
+  .project {
     background: var(--mainWhite);
     margin-bottom: 2rem;
     box-shadow: var(--lightShadow);
@@ -172,17 +159,18 @@ Variables
     box-shadow: var(--darkShadow);
   }
    .project img {
-    height: 20rem;
+    height: 15rem;
     object-fit: cover;
     border-top-left-radius: var(--mainBorderRadius);
     border-top-right-radius: var(--mainBorderRadius);
   }
    .project-footer {
-    padding: 1.5rem;
+    text-align: center;
+    padding: 1rem;
   }
-
-
-   .project-footer h3 {
-    font-size: 2rem;
+  .project-footer h4{
+    font-size: .9rem;
+    padding: 0;
+    margin: 0;
   }
 }
