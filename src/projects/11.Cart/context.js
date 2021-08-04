@@ -9,6 +9,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState(cartItems)
+  const [totalItems, setTotalItems] = useState(cart.length)
 
   const clearCart = () =>{
     setCart([])
@@ -19,6 +20,7 @@ const AppProvider = ({ children }) => {
       value={{
         cart,
         clearCart,
+        totalItems,
       }} 
     >
       {children}
