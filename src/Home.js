@@ -12,17 +12,16 @@ export default function Home() {
             {projects.map( (project, index) => {
                 const {image, title, link } = project
                 return (
-                    <article className='project' key={index}>
-                        <div className='img-container'>
-                            <img src={image} alt={title} />
-                        </div>
-                        <div className='project-footer'>
-                            <h4>{title}</h4>
-                            <Link to={link} className='btn btn-primary btn-details'>
-                                View Project
-                            </Link>
-                        </div>
-                    </article>
+                    <Link to={link}>
+                        <article className='project' key={index}>
+                            <div className='img-container'>
+                                <img src={image} alt={title} />
+                            </div>
+                            <div className='project-footer'>
+                                <h4>{title}</h4>
+                            </div>
+                        </article>
+                    </Link>
                 )
             })}
         </div>

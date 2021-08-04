@@ -9,6 +9,11 @@ const projects = [
         image: './images/projects_thumb/Tours.png',
         link: '/tours'
     },
+    {
+        title: 'Reviews',
+        image: './images/projects_thumb/Reviews.png',
+        link: '/reviews'
+    },
 
 ];
 export default projects;
