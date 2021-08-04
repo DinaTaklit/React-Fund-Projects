@@ -40,6 +40,14 @@ const AppProvider = ({ children }) => {
     setTotalPrice(total.toFixed(2))
   }
 
+  // Function that remove an item from the cart
+  const removeItem = (id) => {
+    const item = cart.find(item => item.id === id)
+    setTotalItems(prevTotalItems => prevTotalItems  - item.amount)
+    setCart(cart.filter(item => item.id !== id))
+  }
+
+  // Use Effect to update the total price everytime the cart, total items is updated
   useEffect(() => {
     calculateTotalPrice()
   }, [cart, totalItems])
@@ -51,7 +59,8 @@ const AppProvider = ({ children }) => {
         clearCart,
         totalItems,
         updateAmount,
-        totalPrice
+        totalPrice,
+        removeItem
       }} 
     >
       {children}
