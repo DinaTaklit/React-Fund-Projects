@@ -43,6 +43,11 @@ const AppProvider = ({ children }) => {
     fetchData()
   }, [])
 
+  // Add the useEffect that get the totals every time the cart channge
+ useEffect(() => {
+  dispatch({ type: 'GET_TOTALS' })
+ }, [state.cart])
+
   return (
     <AppContext.Provider
       value={{
