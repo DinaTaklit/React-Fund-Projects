@@ -29,8 +29,8 @@ const AppProvider = ({ children }) => {
   }
 
   // Dispatch the action that update the amount of items in cart
-  const updateAmount = (id, type, amount) => {
-    dispatch ({ type: 'UPDATE_AMOUNT', payload: { id, type, amount }})
+  const updateAmount = (id, amount) => {
+    dispatch ({ type: 'UPDATE_AMOUNT', payload: { id, amount }})
   }
 
   // Function that fetch date and dispatch the action of displaying items of the cart
