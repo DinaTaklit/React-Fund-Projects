@@ -24,6 +24,11 @@ const projects = [
         image: './images/projects_thumb/Menu.png',
         link: '/menu'
     },
+    {
+        title: 'Tabs',
+        image: './images/projects_thumb/Tabs.png',
+        link: '/tabs'
+    },
 
 ];
 export default projects;
