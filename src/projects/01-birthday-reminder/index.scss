@@ -1,3 +1,4 @@
+
 /*
 =============== 
 Variables
@@ -43,6 +44,9 @@ Variables
   --fixed-width: 450px;
   --clr-pink: #f28ab2;
 }
+
+.birthday-reminder {
+
 /*
 =============== 
 Global Styles
@@ -188,4 +192,5 @@ main {
   border-radius: var(--radius);
   outline: 1px solid rgba(242, 138, 178, 0.8);
   cursor: pointer;
+}
 }

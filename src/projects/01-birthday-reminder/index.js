@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import {data} from './data'
-import './index.css'
+import './index.scss'
 import List from './List'
 
 export default function IndexBirthday() {
     const [people, setPeople] = useState(data)
     return (
-        <>
+        <div className="birthday-reminder">
             <h2 style={{textAlign:"center", margin:"2rem auto 1rem", color:"whitesmoke"}}>Birthday Reminder</h2>
             <main>
                 <section className="container">
@@ -15,6 +15,6 @@ export default function IndexBirthday() {
                     <button onClick={() => setPeople([])}>Clear All</button>
                 </section>
             </main>
-        </>
+        </div>
     )
 }
