@@ -19,7 +19,7 @@ const reducer = (state, action) => {
                         amount: cartTotal.amount + cartItem.amount
                     }
             }, {total:0, amount:0})
-            return {...state, total, amount}
+            return {...state, total:total.toFixed(2), amount}
         default:
             throw new Error('no matching action type')
     }
