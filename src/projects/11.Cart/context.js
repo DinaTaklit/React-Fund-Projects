@@ -10,7 +10,7 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState(cartItems)
   const [totalItems, setTotalItems] = useState(cart.length)
-
+  const [totalPrice, setTotalPrice] = useState(0)
   // Function that clear all the items of the cart
   const clearCart = () =>{
     setCart([])
@@ -37,6 +37,16 @@ const AppProvider = ({ children }) => {
     setTotalItems(prevTotalItems => prevTotalItems - 1) 
   }
   
+  // Function that calculate the totlal price of the items in the cart
+  const calculateTotalPrice = () => {
+    let total = 0
+    cart.forEach(item => total += item.price * item.amount)
+    setTotalPrice(total.toFixed(2))
+  }
+
+  useEffect(() => {
+    calculateTotalPrice()
+  }, [cart, totalItems])
 
   return (
     <AppContext.Provider
@@ -45,7 +55,8 @@ const AppProvider = ({ children }) => {
         clearCart,
         totalItems,
         increaseAmount,
-        decreaseAmount
+        decreaseAmount,
+        totalPrice
       }} 
     >
       {children}
