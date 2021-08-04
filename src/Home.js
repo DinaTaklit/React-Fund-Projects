@@ -11,19 +11,36 @@ export default function Home() {
             {/* list of projects*/}
             {projects.map( (project, index) => {
                 const {image, title, link } = project
-                return (
-                    <Link to={link}>
-                        <article className='global-project' key={index}>
-                            <div>
-                                <img src={image} alt={title} />
-                            </div>
-                            <div className='global-project-footer'>
-                                <h4>{title}</h4>
-                            </div>
-                        </article>
-                    </Link>
-                )
+                if (link.includes('https')){
+                    return (
+                        <a href={link} target='blank' key={index}>
+                            <article className='global-project'>
+                                <div>
+                                    <img src={image} alt={title} />
+                                </div>
+                                <div className='global-project-footer'>
+                                    <h4>{title}</h4>
+                                </div>
+                            </article>
+                        </a>
+                    )
+                } else {
+                    return (
+                        <Link to={link} key={index}>
+                            <article className='global-project'>
+                                <div>
+                                    <img src={image} alt={title} />
+                                </div>
+                                <div className='global-project-footer'>
+                                    <h4>{title}</h4>
+                                </div>
+                            </article>
+                        </Link>
+                    )
+                }
+             
             })}
+            
         </div>
       </section>
 

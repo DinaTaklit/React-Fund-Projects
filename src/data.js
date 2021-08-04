@@ -54,6 +54,11 @@ const projects = [
         image: './images/projects_thumb/Cart.png',
         link: '/cart-use-reducer'
     },
+    {
+        title: 'Lorem Ipsum',
+        image: './images/projects_thumb/LoremIpsum.png',
+        link: 'https://dinataklit.github.io/Lorem-Ipsum-Generator/'
+    },
 
 ];
 export default projects;
