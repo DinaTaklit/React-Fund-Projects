@@ -45,9 +45,14 @@ const projects = [
         link: '/sidebar-modal'
     },
     {
-        title: 'StripeMenu',
+        title: 'Stripe Menu',
         image: './images/projects_thumb/StripeMenu.png',
         link: '/stripe-menu'
+    },
+    {
+        title: 'Cart',
+        image: './images/projects_thumb/Cart.png',
+        link: '/cart-use-reducer'
     },
 
 ];

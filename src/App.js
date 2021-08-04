@@ -12,7 +12,7 @@ import Navbar from './projects/8.Navbar'
 import SidebarModal from './projects/9.Sidebar-Modal'
 import StripeMenu from './projects/10.StripeMenu'
 // import Cart from './projects/11.Cart'
-// import CartUseReducer from './projects/12.CartUseReducer'
+import CartUseReducer from './projects/12.CartUseReducer'
 
 function App() {
   return (
@@ -30,8 +30,7 @@ function App() {
         <Route path="/navbar" component={Navbar}/>
         <Route path="/sidebar-modal" component={SidebarModal}/>
         <Route path="/stripe-menu" component={StripeMenu}/>
-        {/* <Route path="/cart" component={Cart}/>
-        <Route path="/cart-use-reducer" component={CartUseReducer}/> */}
+        <Route path="/cart-use-reducer" component={CartUseReducer}/>
       </Switch>
       <div style={{textAlign:'center', width:'100%'}}>
         <Link to='/' className='global-btn global-btn-primary' >

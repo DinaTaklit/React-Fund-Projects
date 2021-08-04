@@ -21,6 +21,9 @@ Variables
     --small-screen-width: 90vw;
     --fixed-width: 50rem;
   }
+
+.cart-use-reducer{
+
   * {
     margin: 0;
     padding: 0;
@@ -267,3 +270,4 @@ Variables
     border-color: transparent;
     border-width: 0.25px;
   }
+}
