@@ -14,6 +14,11 @@ const projects = [
         image: './images/projects_thumb/Reviews.png',
         link: '/reviews'
     },
+    {
+        title: 'Accordion',
+        image: './images/projects_thumb/Accordion.png',
+        link: '/accordion'
+    },
 
 ];
 export default projects;

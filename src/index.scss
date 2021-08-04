@@ -30,11 +30,7 @@ Variables
   Global Styles 
   ======
   */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -78,8 +74,8 @@ Variables
   ======
   */
 
-   .btn,
-   .btn-primary {
+   .global-btn,
+   .global-btn-primary {
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     color: var(--primaryColor);
@@ -93,26 +89,26 @@ Variables
     border-radius: var(--mainBorderRadius);
     display: inline-block;
   }
-   .btn:hover {
+   .global-btn:hover {
     background: var(--primaryColor);
     color: var(--mainWhite);
   }
 
-   .btn-primary {
+   .global-btn-primary {
     background: var(--primaryColor);
     color: var(--mainWhite);
     border-color: transparent;
   }
-   .btn-primary:hover {
+   .global-btn-primary:hover {
     background: var(--primaryLightColor);
     color: var(--primaryColor);
   }
 
   
-  .section {
+  .global-section {
     padding: 5rem 0;
   }
-   .section-title {
+   .global-section-title {
     font-size: 2rem;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
@@ -120,7 +116,7 @@ Variables
     margin-bottom: 3.5rem;
     margin-top: 1rem;
   }
-   .projects-center {
+   .global-projects-center {
     width: var(--smallWidth);
     margin: 0 auto;
     max-width: var(--fullWidth);
@@ -130,23 +126,23 @@ Variables
     /* align-items: start; */
   }
   @media screen and (max-width: 576px) {
-     .projects-center {
+     .global-projects-center {
       grid-template-columns: repeat(1, 1fr);
     }
   }
   @media screen and (min-width: 768px) {
-    .projects-center {
+    .global-projects-center {
      grid-template-columns: repeat(2, 1fr);
    }
  }
 
   @media screen and (min-width: 959px) {
-    .projects-center {
+    .global-projects-center {
      grid-template-columns: repeat(3, 1fr);
    }
  }
 
-  .project {
+  .global-project {
     background: var(--mainWhite);
     margin-bottom: 2rem;
     box-shadow: var(--lightShadow);
@@ -155,20 +151,20 @@ Variables
     grid-template-rows: auto 1fr;
     border-radius: var(--mainBorderRadius);
   }
-   .project:hover {
+   .global-project:hover {
     box-shadow: var(--darkShadow);
   }
-   .project img {
+   .global-project img {
     height: 15rem;
     object-fit: cover;
     border-top-left-radius: var(--mainBorderRadius);
     border-top-right-radius: var(--mainBorderRadius);
   }
-   .project-footer {
+   .global-project-footer {
     text-align: center;
     padding: 1rem;
   }
-  .project-footer h4{
+  .global-project-footer h4{
     font-size: .9rem;
     padding: 0;
     margin: 0;

@@ -3,21 +3,21 @@ import projects from './data'
 
 export default function Home() {
     return (
-        <section className='section'>
-        <h2 className='section-title'>
+        <section className='global-section'>
+        <h2 className='global-section-title'>
             React Fund Projects
         </h2>
-        <div className='projects-center'>
+        <div className='global-projects-center'>
             {/* list of projects*/}
             {projects.map( (project, index) => {
                 const {image, title, link } = project
                 return (
                     <Link to={link}>
-                        <article className='project' key={index}>
-                            <div className='img-container'>
+                        <article className='global-project' key={index}>
+                            <div>
                                 <img src={image} alt={title} />
                             </div>
-                            <div className='project-footer'>
+                            <div className='global-project-footer'>
                                 <h4>{title}</h4>
                             </div>
                         </article>
