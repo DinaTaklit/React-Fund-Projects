@@ -2,16 +2,18 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import Sidebar from './Sidebar'
 import Submenu from './Submenu'
-import './index.css'
+import './index.scss'
 import { AppProvider } from './context';
 function Index() {
   return (
-    <AppProvider>
-      <Navbar/>
-      <Sidebar/>
-      <Hero/>
-      <Submenu/>
-    </AppProvider>
+    <div className="stripe-menu">
+      <AppProvider>
+        <Navbar/>
+        <Sidebar/>
+        <Hero/>
+        <Submenu/>
+      </AppProvider>
+    </div>
   )
 }
 

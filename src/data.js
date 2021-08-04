@@ -44,6 +44,11 @@ const projects = [
         image: './images/projects_thumb/SidebarModal.png',
         link: '/sidebar-modal'
     },
+    {
+        title: 'StripeMenu',
+        image: './images/projects_thumb/StripeMenu.png',
+        link: '/stripe-menu'
+    },
 
 ];
 export default projects;
