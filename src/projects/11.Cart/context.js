@@ -11,30 +11,26 @@ const AppProvider = ({ children }) => {
   const [cart, setCart] = useState(cartItems)
   const [totalItems, setTotalItems] = useState(cart.length)
   const [totalPrice, setTotalPrice] = useState(0)
+
   // Function that clear all the items of the cart
   const clearCart = () =>{
     setCart([])
   }
 
-  // Function to increase the amount of items in the cart
-  const increaseAmount = (id) => {
-    const cartItem = cart.find(item => item.id === id)
-    const newAmount = cartItem.amount + 1
-    setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
-    setTotalItems(prevTotalItems => prevTotalItems + 1)
-  }
+  // Function that update the amount of items in the cart
+  const updateAmount = (id, amount) => {
 
- // Function to increase the amount of items in the cart
-  const decreaseAmount = (id) => {
-    const cartItem = cart.find(item => item.id === id)
-    const newAmount = cartItem.amount - 1
+    const cartItem = cart.find(item => item.id === id) //Get the item with the given id
+    const newAmount = cartItem.amount + amount // calculate the new amount
     
+    // If the number of items is 0 remove the item from the cart
     if(newAmount ===0) {
       setCart(cart.filter(item => item.id !== id))
     } else {
       setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
     } 
-    setTotalItems(prevTotalItems => prevTotalItems - 1) 
+    // update the total amount of items
+    setTotalItems(prevTotalItems => prevTotalItems  + amount) 
   }
   
   // Function that calculate the totlal price of the items in the cart
@@ -54,8 +50,7 @@ const AppProvider = ({ children }) => {
         cart,
         clearCart,
         totalItems,
-        increaseAmount,
-        decreaseAmount,
+        updateAmount,
         totalPrice
       }} 
     >
