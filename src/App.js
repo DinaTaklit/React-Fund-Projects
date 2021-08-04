@@ -7,10 +7,11 @@
 // import Slider from './projects/7.Slider'
 // import Navbar from './projects/8.Navbar'
 // import SidebarModal from './projects/9.Sidebar-Modal'
-import StripeMenu from './projects/10.StripeMenu'
+// import StripeMenu from './projects/10.StripeMenu'
+import Cart from './projects/11.Cart'
 function App() {
   return (
-    <StripeMenu/>
+    <Cart/>
   );
 }
 
