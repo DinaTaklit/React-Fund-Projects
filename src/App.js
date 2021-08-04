@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom'
 
 import Home from './Home'
 import BirthdayReminder from './projects/01-birthday-reminder'
@@ -19,7 +19,10 @@ function App() {
     <Router>
 
       <Switch>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Home}>
+          <Redirect to="/React-Fund-Projects" />
+        </Route>
+        <Route exact path="/React-Fund-Projects" component={Home}/>
         <Route path="/birthday-reminder" component={BirthdayReminder}/>
         <Route path="/tours" component={ToursApp}/>
         <Route path="/reviews" component={Reviews}/>
@@ -33,7 +36,7 @@ function App() {
         <Route path="/cart-use-reducer" component={CartUseReducer}/>
       </Switch>
       <div style={{textAlign:'center', width:'100%'}}>
-        <Link to='/' className='global-btn global-btn-primary' >
+        <Link to='/React-Fund-Projects' className='global-btn global-btn-primary' >
               back home
           </Link>
       </div>
