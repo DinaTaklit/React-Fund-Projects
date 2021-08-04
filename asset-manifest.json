@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-Fund-Projects/static/css/main.7128be6d.chunk.css",
+    "main.js": "/React-Fund-Projects/static/js/main.c123b356.chunk.js",
+    "main.js.map": "/React-Fund-Projects/static/js/main.c123b356.chunk.js.map",
+    "runtime-main.js": "/React-Fund-Projects/static/js/runtime-main.de1c2744.js",
+    "runtime-main.js.map": "/React-Fund-Projects/static/js/runtime-main.de1c2744.js.map",
+    "static/js/2.dfdfdb12.chunk.js": "/React-Fund-Projects/static/js/2.dfdfdb12.chunk.js",
+    "static/js/2.dfdfdb12.chunk.js.map": "/React-Fund-Projects/static/js/2.dfdfdb12.chunk.js.map",
+    "index.html": "/React-Fund-Projects/index.html",
+    "static/css/main.7128be6d.chunk.css.map": "/React-Fund-Projects/static/css/main.7128be6d.chunk.css.map",
+    "static/js/2.dfdfdb12.chunk.js.LICENSE.txt": "/React-Fund-Projects/static/js/2.dfdfdb12.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/React-Fund-Projects/static/media/hero.acf1e00e.svg",
+    "static/media/logo.6ad422bb.svg": "/React-Fund-Projects/static/media/logo.6ad422bb.svg",
+    "static/media/logo.f13078c1.svg": "/React-Fund-Projects/static/media/logo.f13078c1.svg",
+    "static/media/phone.94a7a4fe.svg": "/React-Fund-Projects/static/media/phone.94a7a4fe.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de1c2744.js",
+    "static/js/2.dfdfdb12.chunk.js",
+    "static/css/main.7128be6d.chunk.css",
+    "static/js/main.c123b356.chunk.js"
+  ]
+}
