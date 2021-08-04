@@ -1,6 +1,9 @@
 import React from 'react'
 import { useGlobalContext } from './context'
 const CartItem = ({ id, img, title, price, amount }) => {
+
+  const {removeItem} = useGlobalContext() // add global functionalities with useGlobalContext
+
   return (
     <article className='cart-item'>
       <img src={img} alt={title} />
@@ -10,7 +13,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         {/* remove button */}
         <button
           className='remove-btn'
-          onClick={() => console.log('remove item')}
+          onClick={() => removeItem(id)}
         >
           remove
         </button>

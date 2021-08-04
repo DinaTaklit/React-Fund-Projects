@@ -24,7 +24,8 @@ const AppProvider = ({ children }) => {
 
   // Dispatch the action that Remove an item from cart
   const removeItem = (id) => {
-    dispatch ({ type: 'REMOVE_ITEM', id })
+    console.log('removeItem', id)
+    dispatch ({ type: 'REMOVE_ITEM', payload: id })
   }
 
   // Dispatch the action that update the amount of items in cart

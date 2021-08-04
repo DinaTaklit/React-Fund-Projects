@@ -7,7 +7,10 @@ const reducer = (state, action) => {
         case 'CLEAR_CART':
             return {...state, cart: []}
         case 'REMOVE_ITEM':
-            return {...state}
+            return {
+                ...state,
+                cart: state.cart.filter(item => item.id !== action.payload)
+            }
         case 'UPDATE_AMOUNT':
             return {...state}
         case 'GET_TOTALS':
