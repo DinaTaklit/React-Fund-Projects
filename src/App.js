@@ -5,7 +5,7 @@ import BirthdayReminder from './projects/01-birthday-reminder'
 import ToursApp from './projects/2.Tours'
 import Reviews from './projects/3.Reviews'
 import Accordion from './projects/4.Accordion'
-// import Menu from './projects/5.Menu'
+import Menu from './projects/5.Menu'
 // import Tabs from './projects/6.Tabs'
 // import Slider from './projects/7.Slider'
 // import Navbar from './projects/8.Navbar'
@@ -24,8 +24,8 @@ function App() {
         <Route path="/tours" component={ToursApp}/>
         <Route path="/reviews" component={Reviews}/>
         <Route path="/accordion" component={Accordion}/>
-        {/* <Route path="/menu" component={Menu}/>
-        <Route path="/tabs" component={Tabs}/>
+        <Route path="/menu" component={Menu}/>
+        {/* <Route path="/tabs" component={Tabs}/>
         <Route path="/slider" component={Slider}/>
         <Route path="/navbar" component={Navbar}/>
         <Route path="/sidebar-modal" component={SidebarModal}/>

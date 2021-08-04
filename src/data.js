@@ -19,6 +19,11 @@ const projects = [
         image: './images/projects_thumb/Accordion.png',
         link: '/accordion'
     },
+    {
+        title: 'Menu',
+        image: './images/projects_thumb/Menu.png',
+        link: '/menu'
+    },
 
 ];
 export default projects;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './index.css'
+import './index.scss'
 import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
@@ -20,16 +20,21 @@ function Index() {
     setMenuItems(newItems)
   }
 
-  return (<main>
-  <section className="menu section">
-    <div className="title">
-      <h2>Our Menu</h2>
-      <div className="underline"></div>
-    </div>
-    <Categories categories={categories} filterItems={filterItems}/>
-    <Menu items={menuItems}/>
-  </section>
-</main>)
+  return (
+  <div className="menu">
+      <main>
+      <section className="menu section">
+        <div className="title">
+          <h2>Our Menu</h2>
+          <div className="underline"></div>
+        </div>
+        <Categories categories={categories} filterItems={filterItems}/>
+        <Menu items={menuItems}/>
+      </section>
+    </main>
+  </div>
+
+  )
 }
 
 export default Index;
