@@ -39,6 +39,11 @@ const projects = [
         image: './images/projects_thumb/Navbar.png',
         link: '/navbar'
     },
+    {
+        title: 'Sidebar Modal',
+        image: './images/projects_thumb/SidebarModal.png',
+        link: '/sidebar-modal'
+    },
 
 ];
 export default projects;
