@@ -59,6 +59,10 @@ const projects = [
         image: './images/projects_thumb/LoremIpsum.png',
         link: 'https://dinataklit.github.io/Lorem-Ipsum-Generator/'
     },
-
+    {
+        title: 'Color Generator',
+        image: './images/projects_thumb/ColorGenerator.png',
+        link: 'https://dinataklit.github.io/Color-Generator/'
+    },
 ];
 export default projects;
