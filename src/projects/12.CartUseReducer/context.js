@@ -27,12 +27,18 @@ const AppProvider = ({ children }) => {
     dispatch ({ type: 'REMOVE_ITEM', id })
   }
 
+  // Dispatch the action that update the amount of items in cart
+  const updateAmount = (id, type, amount) => {
+    dispatch ({ type: 'UPDATE_AMOUNT', payload: { id, type, amount }})
+  }
+
   return (
     <AppContext.Provider
       value={{
         ...state,
         clearCart,
-        removeItem
+        removeItem,
+        updateAmount
       }}
     >
       {children}
