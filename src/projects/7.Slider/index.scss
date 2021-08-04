@@ -42,6 +42,9 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
+.slider{
+
 /*
 =============== 
 Global Styles
@@ -251,4 +254,6 @@ article.lastSlide {
 }
 article.nextSlide {
   transform: translateX(100%);
+}
+
 }
