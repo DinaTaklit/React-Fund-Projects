@@ -21,6 +21,7 @@ const AppProvider = ({ children }) => {
     const cartItem = cart.find(item => item.id === id)
     const newAmount = cartItem.amount + 1
     setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
+    setTotalItems(prevTotalItems => prevTotalItems + 1)
   }
 
  // Function to increase the amount of items in the cart
@@ -28,6 +29,7 @@ const AppProvider = ({ children }) => {
     const cartItem = cart.find(item => item.id === id)
     const newAmount = cartItem.amount - 1
     setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
+    setTotalItems(prevTotalItems => prevTotalItems - 1)
   }
   
 
