@@ -11,9 +11,25 @@ const AppProvider = ({ children }) => {
   const [cart, setCart] = useState(cartItems)
   const [totalItems, setTotalItems] = useState(cart.length)
 
+  // Function that clear all the items of the cart
   const clearCart = () =>{
     setCart([])
   }
+
+  // Function to increase the amount of items in the cart
+  const increaseAmount = (id) => {
+    const cartItem = cart.find(item => item.id === id)
+    const newAmount = cartItem.amount + 1
+    setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
+  }
+
+ // Function to increase the amount of items in the cart
+  const decreaseAmount = (id) => {
+    const cartItem = cart.find(item => item.id === id)
+    const newAmount = cartItem.amount - 1
+    setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
+  }
+  
 
   return (
     <AppContext.Provider
@@ -21,6 +37,8 @@ const AppProvider = ({ children }) => {
         cart,
         clearCart,
         totalItems,
+        increaseAmount,
+        decreaseAmount
       }} 
     >
       {children}
