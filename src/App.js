@@ -8,10 +8,11 @@
 // import Navbar from './projects/8.Navbar'
 // import SidebarModal from './projects/9.Sidebar-Modal'
 // import StripeMenu from './projects/10.StripeMenu'
-import Cart from './projects/11.Cart'
+// import Cart from './projects/11.Cart'
+import CartUseReducer from './projects/12.CartUseReducer'
 function App() {
   return (
-    <Cart/>
+    <CartUseReducer/>
   );
 }
 
