@@ -64,5 +64,10 @@ const projects = [
         image: './images/projects_thumb/ColorGenerator.png',
         link: 'https://dinataklit.github.io/Color-Generator/'
     },
+    {
+        title: 'Grocery Bud',
+        image: './images/projects_thumb/GroceryBud.png',
+        link: 'https://dinataklit.github.io/Grocery-Bud/'
+    },
 ];
 export default projects;
