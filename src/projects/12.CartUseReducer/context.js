@@ -17,10 +17,16 @@ const AppProvider = ({ children }) => {
   
   const [state, dispatch] = useReducer(reducer, initialState)
 
+  // Dispatch clear cart action when cart is cleared
+  const clearCart = () => {
+    dispatch({ type: 'CLEAR_CART' })
+  }
+
   return (
     <AppContext.Provider
       value={{
         ...state,
+        clearCart
       }}
     >
       {children}
