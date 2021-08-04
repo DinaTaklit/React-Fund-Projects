@@ -28,8 +28,13 @@ const AppProvider = ({ children }) => {
   const decreaseAmount = (id) => {
     const cartItem = cart.find(item => item.id === id)
     const newAmount = cartItem.amount - 1
-    setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
-    setTotalItems(prevTotalItems => prevTotalItems - 1)
+    
+    if(newAmount ===0) {
+      setCart(cart.filter(item => item.id !== id))
+    } else {
+      setCart(cart.map(item => (item.id === id ? { ...item, amount: newAmount } : item)))
+    } 
+    setTotalItems(prevTotalItems => prevTotalItems - 1) 
   }
   
 
