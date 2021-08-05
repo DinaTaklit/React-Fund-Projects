@@ -69,5 +69,10 @@ const projects = [
         image: './images/projects_thumb/GroceryBud.png',
         link: 'https://dinataklit.github.io/Grocery-Bud/'
     },
+    {
+        title: 'Cocktails DB',
+        image: './images/projects_thumb/Cocktails.png',
+        link: 'https://dinataklit.github.io/CocktailDB/'
+    },
 ];
 export default projects;
